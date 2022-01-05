@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Loaned__c</fullName>
+    <defaultValue>today()</defaultValue>
+    <description>Date for when the book was loaned out</description>
+    <externalId>false</externalId>
+    <label>Date Loaned</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>
