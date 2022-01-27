@@ -1,0 +1,22 @@
+<template>
+
+    <lightning-input type="search" onchange={updateSearch}></lightning-input> <br><br>
+    <lightning-card>
+        <table>
+            <thead>
+                <tr>
+                    <th>Currency</th>
+                    <th>Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={rates} for:item="rate">
+                    <tr key={rate.key}>
+                        <td key={rate.key}>{rate.key}</td>
+                        <td key={rate.key}>{rate.value}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card>
+</template>
