@@ -1,0 +1,32 @@
+<template>
+    <template if:true={currentAccount}>
+        <template for:each={currentAccount} for:item="current">
+            <lightning-card title="Account Details" key={current.Id}>
+                Account: {current.Name} Website: {current.Website}
+            </lightning-card>
+        </template>
+    </template>
+    <template if:true={currentContacts}>
+        <lightning-card>
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={currentContacts} for:item="con">
+                        <tr key={con.Id}>
+                            <td key={con.Id}>{con.FirstName}</td>
+                            <td key={con.Id}>{con.LastName}</td>
+                            <td key={con.Id}>{con.Phone}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </lightning-card>
+    </template>
+
+</template>
